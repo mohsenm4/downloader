@@ -1,8 +1,24 @@
 # Downloader
 
+[![CI](https://github.com/mohsenm4/downloader/actions/workflows/ci.yml/badge.svg)](https://github.com/mohsenm4/downloader/actions/workflows/ci.yml)
+[![Release](https://img.shields.io/github/v/release/mohsenm4/downloader)](https://github.com/mohsenm4/downloader/releases/latest)
+[![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+
 A small macOS app to save audio or video from a link, and turn speech into text.
 
 ![Downloader, dark theme](docs/screenshots/dark-jobs.png)
+
+## Download
+
+Get the latest **Downloader-…-macos-universal.zip** from [Releases](https://github.com/mohsenm4/downloader/releases/latest). It works on Apple Silicon and Intel Macs.
+
+The app is not notarized by Apple, so macOS blocks it the first time. Open it once, then click **Open Anyway** in **System Settings → Privacy & Security**. Or run:
+
+```sh
+xattr -dr com.apple.quarantine /Applications/Downloader.app
+```
+
+Then install the tools and a model, as below.
 
 ## Features
 
@@ -60,7 +76,19 @@ make run     # run from source
 make app     # build cmd/app/Downloader.app
 make test    # tests
 make race    # tests with the race detector
+make release VERSION=1.0.0   # universal app zip in ./dist
 ```
+
+### Releases
+
+Push a tag and GitHub Actions builds the universal app and publishes the release:
+
+```sh
+git tag v1.0.0
+git push origin v1.0.0
+```
+
+Update [CHANGELOG.md](CHANGELOG.md) before tagging.
 
 ## How it works
 
@@ -92,3 +120,7 @@ internal/interface/ui    Fyne UI: theme, cards, queue rows
 
 - Some sites block requests from VPN servers or some countries. The error message says so; try another server.
 - Only download content you have the right to download.
+
+## License
+
+[MIT](LICENSE)
