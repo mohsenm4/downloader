@@ -1,0 +1,6 @@
+[Details]
+Icon = "icon.png"
+Name = "Downloader"
+ID = "io.mohsen.downloader"
+Version = "1.1.0"
+Build = 3

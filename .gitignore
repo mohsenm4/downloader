@@ -1,0 +1,22 @@
+# build output
+*.app
+/bin/
+/dist/
+/fyne-cross/
+
+# whisper models and temp audio
+*.bin
+*.wav
+
+# downloads made while testing
+*.mp3
+*.mp4
+*.m4a
+*.webm
+*.part
+*.ytdl
+
+# editors and macOS
+.DS_Store
+.idea/
+.vscode/
