@@ -1,6 +1,6 @@
 .PHONY: run test race vet build app release shots tools
 
-VERSION ?= 1.0.0
+VERSION ?= 1.0.1
 BUILD   ?= 1
 APP     := cmd/app/Downloader.app
 ZIP     := Downloader-$(VERSION)-macos-universal.zip

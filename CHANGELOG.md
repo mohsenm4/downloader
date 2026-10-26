@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.0.1 — 2026-10-26
+
+- New app icon: violet, rounded square (macOS style), showing download + text.
+- Icon source added as `cmd/app/icon.svg`.
+
 ## 1.0.0 — 2026-10-25
 
 First public release.
